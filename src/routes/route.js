@@ -1,17 +1,20 @@
 const express = require('express');
 const router = express.Router();
-//const authorController = require('../controllers/authorController')
-const bookController =require("../controllers/bookcontroller")
+const jwt = require('jsonwebtoken')
+
+const userController =require("../controllers/usercontroller")
+const commonMw = require("../middleware/commonmw")
 
 
 
 
- //router.post('/authors',  authorController.createAuthor  );
 
-// router.post('/Book', bookController.createBook  );
- router.get('/books', bookController.getBooks )
 
-router.post('/publisher', bookController.createBook)
+router.post('/users', userController.createUser)
+router.post('/login', userController.login)
+router.get('/users/:userId', commonMw.authenticate, userController.getDetails)
+router.put('/users/:userId', commonMw.authenticate, userController.updateEmail)
+
 
 
 
