@@ -1,20 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken')
+const axios = require("axios")
 
 const userController =require("../controllers/usercontroller")
-const commonMw = require("../middleware/commonmw")
+//const commonMw = require("../middleware/commonmw")
 
 
 
 
 
-
-router.post('/users', userController.createUser)
-router.post('/login', userController.login)
-router.get('/users/:userId', commonMw.authenticate, userController.getDetails)
-router.put('/users/:userId', commonMw.authenticate, userController.updateEmail)
-
+//router.post("/cowin/getOtp", userController.getOtp)
+router.get("/getweather", userController.getweatherofLondon)
+router.get("/londontemp", userController.Londontemp)
 
 
 
