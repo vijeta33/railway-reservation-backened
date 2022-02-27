@@ -1,20 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const jwt = require('jsonwebtoken')
 
-const authorController =require("../controllers/Authorcontroller")
-
-
-
+const CustomerController =require("../controllers/CustomerController")
+const CardController = require("../controllers/CardController")
+const  validator= require('../middleware/validation');
 
 
+//---------------------CustomerAPI-----------------------//
+router.post('/customer', validator.checkCustomer,CustomerController.createCustomer)
+router.get('/getdata',CustomerController.getallcustomers);
+router.delete('/customer/:customerId', CustomerController.Deletecustomer)
 
-router.post('/BASE_URL/authors', authorController.createAuthor )
-
-
-
-router.post('/blogs', authorController.myBlogCreation )
-router.get('/getdata',authorController.returnBlogsFiltered);
+//---------------------CardAPI-----------------------------//
+router.post('/card',validator.checkCard,CardController.createCard)
+router.get('/getcard',CardController.getCarddetails)
 
 
 

@@ -1,21 +1,16 @@
 const express = require('express');
-var bodyParser = require('body-parser');
-
-const route = require('./routes/route.js');
+const mongoose = require('mongoose');
 
 const app = express();
 
+
+const route = require('./routes/route.js');
+
+
+var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
-
-
-
-
-const mongoose = require('mongoose');
-const { response } = require('express');
 
 mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/vijetahiwarkar_db?retryWrites=true&w=majority")
     .then(() => console.log('mongodb running on 27017'))

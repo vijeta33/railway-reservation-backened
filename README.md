@@ -1,14 +1,9 @@
-# radium
-Repository for backend cohort - Radium
+Customer API
+1. Get all customers List with status ACTIVE [GET]
+2. Delete customer. [DELETE]
+3. Create new customer [POST]
 
 
-# step 1
-install mongoose : npm i mongoose (from parent folder)
-
-
-# step 2
-use MOdel to interact with DB
-
-
-#step 3
-break your code into correct folder structure 
+Card API
+1. Get all Card List[GET]
+2. Create new card [POST]
