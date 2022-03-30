@@ -22,6 +22,7 @@ const addCoupon = async (req, res) => {
 module.exports.addCoupon = addCoupon
 
 
+
 const Coupon = async (req, res) => {
     const Coupon = await CouponModels.findOne({ code: req.body.coupon })
     if (Coupon) {
