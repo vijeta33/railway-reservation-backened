@@ -11,6 +11,7 @@ const addCoupon = async (req, res) => {
             value: req.body.couponValue,
             code: req.body.codestring
         }
+        
         const couponCode = await CouponModels.create(newCoupon)
         res.status(201).send({ msg: 'coupon created sucessfully', data: couponCode })
     } catch (err) {

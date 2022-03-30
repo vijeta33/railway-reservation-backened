@@ -8,7 +8,6 @@ const CouponSchema = new mongoose.Schema({
     value: Number,
     code: String
    
-   
 }, {timestamps: true})
 
 
