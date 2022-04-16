@@ -21,8 +21,8 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
     }
 
-
 }, { timestamps: true })
+
 
 
 module.exports = mongoose.model('user', UserSchema)

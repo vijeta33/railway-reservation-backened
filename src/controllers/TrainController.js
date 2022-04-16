@@ -66,5 +66,7 @@ const gettrain = async (req, res) => {
     }
 }
 
+
+
 module.exports.createtrain = createtrain
 module.exports.gettrain = gettrain

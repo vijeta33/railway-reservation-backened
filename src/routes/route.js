@@ -7,8 +7,6 @@ const BookingController = require('../controllers/BookingController')
 const TrainController = require('../controllers/TrainController')
 
 
-
-
 router.post('/register',AdminController.registeruser)
 router.post('/login',AdminController.login)
 

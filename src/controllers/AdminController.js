@@ -1,6 +1,7 @@
 
 const UserModels = require('../models/UserModels')
 
+
 const registeruser = async(req,res)=>{
     try{
         const requestbody = req.body

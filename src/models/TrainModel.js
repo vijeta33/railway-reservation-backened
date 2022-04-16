@@ -6,6 +6,7 @@ const TrainSchema = new mongoose.Schema({
         type: String,
         unique: true,
     },
+    
     userId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "user",
